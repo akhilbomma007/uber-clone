@@ -7,7 +7,7 @@ const RideSelector = ({pickupCoordinates, dropoffCoordinates}) => {
     const [rideDuration, setRideDuration] = useState()
     console.log(pickupCoordinates,dropoffCoordinates)
     useEffect(() => {
-        fetch(`https://api.mapbox.com/directions/v5/driving/${pickupCoordinates[0]},${pickupCoordinates[1]};${dropoffCoordinates[0]},${dropoffCoordinates[1]}?access_token=pk.eyJ1IjoiYWtoaWxib21tYTAwNyIsImEiOiJja3ZtdjBya3YwMmw5Mm9xdmdtNHF5cnJ4In0.p0t-ByqVTCexgsvEJEUTrA`)
+        fetch(`https://api.mapbox.com/directions/v5/mapbox/driving/${pickupCoordinates[0]},${pickupCoordinates[1]};${dropoffCoordinates[0]},${dropoffCoordinates[1]}?access_token=pk.eyJ1IjoiYWtoaWxib21tYTAwNyIsImEiOiJja3ZtdjBya3YwMmw5Mm9xdmdtNHF5cnJ4In0.p0t-ByqVTCexgsvEJEUTrA`)
         .then(res => res.json())
         .then(data => {
             console.log("data is here")
