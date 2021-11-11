@@ -5,8 +5,8 @@ import Link from 'next/link'
 
 const search = () => {
 
-    const[pickup, setPickUp] = useState("")
-    const[dropoff, setDropOff] = useState("")
+    const[pickup, setPickUp] = useState([])
+    const[dropoff, setDropOff] = useState([])
 
     return (
         <Wrapper>

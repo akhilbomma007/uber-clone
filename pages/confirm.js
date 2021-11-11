@@ -44,6 +44,8 @@ const confirm = () => {
         getPickupCoordinates(pickup);
         getDropOffCoordinates(dropoff);
     }, [pickup, dropoff])
+    console.log(pickup,dropoff)
+    // console.log(pickupLocation,dropoffLocation)
 
     return (
         <Wrapper>
@@ -52,7 +54,10 @@ const confirm = () => {
                 dropoffCoordinates = {dropoffLocation}
             />
             <RideContainer>
-                <RideSelector />
+                <RideSelector 
+                    pickupCoordinates = {pickupLocation}
+                    dropoffCoordinates = {dropoffLocation}
+                />
                 <ConfirmButton>
                     Confirm Ride
                 </ConfirmButton>
